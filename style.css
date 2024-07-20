@@ -8,6 +8,7 @@
   --light-purple: #90338d;
 }
 body {
+  box-sizing: border-box;
   padding: 0;
   margin: 0 auto;
   font-family: "Teko", sans-serif;
@@ -37,16 +38,20 @@ header {
   display: flex;
   justify-content: space-between; /* 這樣 header-menu 和 header-icons 會分佈在左右兩邊 */
   width: 100%;
+  padding: 30px;
 }
 .header-menu {
+  width: auto;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   padding: 20px;
   align-items: flex-end;
 }
 .header-menu a {
-  color: #fff;
+  font-size: 1.2em;
+  color: var(--text-color);
   text-decoration: none;
+  line-height: 0.8;
 }
 .header-icons {
   display: flex;
@@ -137,8 +142,8 @@ header {
   color: #98c9ff;
   font-size: 4.8em;
   color: var(--bg-color); /* 文本颜色可以根据需要调整 */
-  text-shadow: -1px -1px 0 var(--light-purple), 1px -1px 0 var(--light-purple),
-    -1px 1px 0 var(--light-purple), 1px 1px 0 var(--light-purple);
+  text-shadow: -1px -1px 0 var(--light-red), 1px -1px 0 var(--light-red),
+    -1px 1px 0 var(--light-red), 1px 1px 0 var(--light-red);
 }
 
 .heading-content {
@@ -156,8 +161,9 @@ header {
   width: 49%;
   display: block;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 17px;
   padding: 0 20px;
+  color:#FFF;
 }
 .heading-font-box h1 {
   line-height: 0;
@@ -200,7 +206,7 @@ header {
   z-index: 1;
 }
 .splide__slide.is-active img {
-  transform: scale(1.2);
+  transform: scale(1.4);
   z-index: 888;
 }
 
@@ -231,30 +237,44 @@ header {
 .splide__pagination {
   display: none !important;
 }
-footer {
-  width: 100%;
+footer{
+  padding: 0 30px;
 }
 .footer {
   margin-top: 50px;
   display: flex;
-  padding: 0 20px;
+  justify-content: center;
   gap: 40px;
   margin: 0 auto;
+  width: 100%;
+}
+.footer-box{
+  padding: 20px;
+}
+.footer-form h3{
+  margin: 0 0px 10px 0px;
+  font-size: 26px; 
+  line-height: 1; 
+  color: var(--light-red)
 }
 .footer-form {
-  width: 25%;
-  padding: 30px;
+  width: 20%;
   display: flex;
   flex-direction: column;
 }
 .footer-form-box {
-  padding: 5px;
+  padding: 1px;
   background-color: var(--text-color);
   color: #fff;
 }
+.footer-form-button{
+  align-self: flex-end;
+  font-size: 25px;
+  color: var(--light-red);
+  margin-top: 10px;
+}
 .footer-information {
-  padding: 30px;
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -274,8 +294,17 @@ footer {
   padding: 0 10px;
   color: var(--text-color);
   text-decoration: none;
+  font-size: 22px;
 }
-.footer-logo {
-  width: 25%;
-  padding: 30px;
+.footer-logo{
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.footer-logo img{
+  max-width: 80%; 
+  height: auto; 
+  object-fit: contain; 
+  padding-bottom: 10px;
 }
