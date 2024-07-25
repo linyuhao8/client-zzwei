@@ -19,7 +19,7 @@ body {
   color: var(--text-color);
 }
 .body-container {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
 }
 h1,
@@ -40,10 +40,14 @@ header {
   width: 100%;
   padding: 30px;
 }
+.header-logo{
+  align-items: flex-start;
+  margin-right: 10px;
+}
 .header-menu {
   width: auto;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   padding: 20px;
   align-items: flex-end;
 }
@@ -114,6 +118,8 @@ header {
   font-size: 20px;
   line-height: 1;
   height: 40px;
+  cursor: pointer;
+  margin-bottom: -5px;
 }
 
 @keyframes marquee {
@@ -158,10 +164,11 @@ header {
   width: 49%;
 }
 .heading-font-box {
+  font-family: 'Poppins';
   width: 49%;
   display: block;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 14px;
   padding: 0 20px;
   color:#FFF;
 }
@@ -174,6 +181,7 @@ header {
 .text-white {
   font-size: 18px;
   color: #fff;
+  font-family: 'Poppins';
 }
 .text-blue {
   font-size: 30px;
@@ -268,12 +276,15 @@ footer{
   padding: 1px;
   background-color: var(--text-color);
   color: #fff;
+  font-family: 'Poppins';
+  font-size: 13px;
 }
 .footer-form-button{
   align-self: flex-end;
   font-size: 25px;
   color: var(--light-red);
   margin-top: 10px;
+  text-decoration: none;
 }
 .footer-information {
   width: 60%;
