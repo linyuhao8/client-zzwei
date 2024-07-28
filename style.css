@@ -168,7 +168,7 @@ header {
   width: 49%;
 }
 .heading-font-box {
-  font-family: 'Poppins';
+  font-family: "Poppins", sans-serif;
   width: 49%;
   display: block;
   font-weight: 300;
@@ -185,10 +185,11 @@ header {
 .text-white {
   font-size: 16px;
   color: #fff;
-  font-family: 'Poppins';
+  font-family: "Poppins", sans-serif;
 }
 .text-blue {
   font-size: 25px;
+  margin: 10px 0px;
 }
 .artist-section {
   padding-top: 50px;
