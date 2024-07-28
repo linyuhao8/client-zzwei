@@ -91,15 +91,19 @@ header {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  align-items: center;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 50px;
+}
+.hero-logo{
+  width: 20em;
 }
 .hero-img-information {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
+  width: 20em;
 }
 .hero-img-information-heading {
   color: var(--light-purple);
@@ -179,12 +183,12 @@ header {
   text-align: center;
 }
 .text-white {
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   font-family: 'Poppins';
 }
 .text-blue {
-  font-size: 30px;
+  font-size: 25px;
 }
 .artist-section {
   padding-top: 50px;
@@ -203,8 +207,8 @@ header {
   flex-direction: row-reverse;
 }
 .splide__slide {
-  margin-top: 50px;
-  padding: 100px 0px;
+  margin-top: 0px;
+  padding: 150px 0px 100px 0px;
 }
 .splide__slide img {
   width: 100%;
