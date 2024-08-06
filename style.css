@@ -38,7 +38,7 @@ header {
   display: flex;
   justify-content: space-between; 
   width: 100%;
-  padding: 30px;
+  padding:30px 30px 30px 30px;
 }
 .header-logo{
   align-items: flex-start;
@@ -59,7 +59,7 @@ header {
 }
 .header-icons {
   display: flex;
-  padding: 20px;
+  padding: 20px 20px 20px 20px ;
   gap: 10px;
 }
 .circle-icon {
@@ -329,15 +329,101 @@ footer{
   object-fit: contain; 
   padding-bottom: 10px;
 }
+#toggle {
+  display: block;
+  width:25px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  position: fixed;
+  top: 20px;
+  right:50px;
+  display: none;
+}
+
+#toggle:after,
+#toggle:before,
+#toggle div {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: var(--light-purple);
+  transition: 300ms ease;
+}
+
+#toggle:before {
+  top: 20%;
+}
+
+#toggle div {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#toggle:after {
+  bottom: 20%;
+}
+
+.open-menu #toggle:before {
+  top: 40%;
+  transform: rotate(45deg);
+}
+
+.open-menu #toggle div {
+  opacity: 0;
+}
+
+.open-menu #toggle:after {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+.overlay-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  position: fixed;
+  top: 0;
+  right: -50vw; 
+  padding: 50px;
+  visibility: hidden; 
+  opacity: 0; 
+  transition: right 300ms ease, visibility 300ms ease, opacity 300ms ease;
+  z-index: 1000;
+}
+
+.open-menu .overlay-menu {
+  right: 0; /* Slide in from the right */
+  visibility: visible; /* Make visible */
+  opacity: 1; /* Make visible */
+}
+
+.overlay-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  text-transform: uppercase;
+  transition: color 300ms ease;
+}
+
+.overlay-menu a:hover {
+  color: #ddd;
+}
 @media(max-width: 768px){
-  .header-content {
-    display: flex;
-    justify-content: flex-end; 
-    padding: 30px;
-  }
-  .header-menu{
-    display:none;
-  }
+  .header-menu a:nth-child(n+2):nth-child(-n+8) {
+    display: none;
+}
+.header-icons {
+  display: flex;
+  padding: 20px 80px 0px 0px ;
+  gap: 10px;
+}
   .heading-content{
     display: block;
   }
@@ -384,5 +470,8 @@ footer{
     height: auto; 
     object-fit: contain; 
     padding-bottom: 10px;
+  }
+  #toggle {
+    display: block;
   }
  }

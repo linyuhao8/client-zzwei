@@ -27,6 +27,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       rel="stylesheet"
     />
     <!--splide-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <title>website</title>
   </head>
   <body>
@@ -49,6 +50,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <a href="">CONTACT</a>
             <a href="">TICKETS</a>
           </div>
+          <div class="header-end">
           <div class="header-icons">
             <div class="circle-icon">
               <a href=""><i class="fa-brands fa-tiktok"></i></a>
@@ -60,7 +62,20 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               <a href=""><i class="fa-brands fa-facebook-f"></i></a>
             </div>
           </div>
+          <a id="toggle">
+            <div></div>
+          </a>
+          <div class="overlay-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Line Up</a>
+            <a href="#">FAQ</a>
+            <a href="#">Merch</a>
+            <a href="#">Contact</a>
+            <a href="#">Tickets</a>
+          </div>
         </div>
+      </div>
       </header>
       <div class="hero-img">
         <img src="/images/images/Logo above hero image.png" alt="hero-logo" class="hero-logo">
@@ -231,7 +246,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         </div>
       </footer>
     </div>
-
+    <script>
+      (function($) {
+        $("#toggle").click(function(e) {
+          e.preventDefault();
+          $('body').toggleClass("open-menu");
+        });
+      })(jQuery);
+    </script>
     <!--splide js-->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
