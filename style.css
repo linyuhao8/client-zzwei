@@ -149,7 +149,6 @@ header {
   white-space: nowrap;
   animation: marquee 3s linear infinite;
   font-weight: 300;
-  color: #98c9ff;
   font-size: 4.8em;
   color: var(--bg-color); /* 文本颜色可以根据需要调整 */
   text-shadow: -1px -1px 0 var(--light-red), 1px -1px 0 var(--light-red),
@@ -399,9 +398,9 @@ footer{
 }
 
 .open-menu .overlay-menu {
-  right: 0; /* Slide in from the right */
-  visibility: visible; /* Make visible */
-  opacity: 1; /* Make visible */
+  right: 0; 
+  visibility: visible; 
+  opacity: 1; 
 }
 
 .overlay-menu a {
@@ -415,6 +414,57 @@ footer{
 .overlay-menu a:hover {
   color: #ddd;
 }
+
+
+
+
+/* Live up page css */
+
+.live-up-body{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grid-container {
+  margin: 50px 0;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: repeat(auto, auto);
+  gap: 30px; 
+  padding:0 20px;
+}
+
+.grid-item {
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:0px;
+}
+.grid-item h2{
+  line-height: 1;
+  font-size: 1.1em;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid-item h2 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+/* Live up page css */
+
+
+/* RWD Css */
+
 @media(max-width: 768px){
   .header-menu a:nth-child(n+2):nth-child(-n+8) {
     display: none;
@@ -474,4 +524,14 @@ footer{
   #toggle {
     display: block;
   }
+  /* live up page rwd*/
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 在中等屏幕上显示两列 */
+  }
  }
+ @media (max-width: 480px) {
+  /* live up page rwd*/
+  .grid-container {
+    grid-template-columns: 1fr; /* 在小屏幕上显示一列 */
+  }
+}
