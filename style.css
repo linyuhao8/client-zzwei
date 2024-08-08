@@ -12,7 +12,6 @@ body {
   padding: 0;
   margin: 0 auto;
   font-family: "Teko", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   background-color: var(--bg-color);
@@ -94,7 +93,7 @@ header {
 .hero-img {
   margin-top: -80px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/images/hero\ image.jpg");
+    url("/images/images/hero-image.jpg");
   height: 600px;
   background-position: center;
   background-repeat: no-repeat;
@@ -449,15 +448,15 @@ footer{
 .live-up-body h3{
   font-family: "Poppins", sans-serif;
   color:#fff;
-  font-size: 30;
-  margin-top: 50;
+  font-size: 30px;
+  margin-top: 50px;
 }
 .grid-container {
   margin: 50px 0;
   max-width: 800px;
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
-  grid-template-rows: repeat(auto, auto);
+  grid-template-rows: auto;
   gap: 30px; 
   padding:0 20px;
 }
@@ -469,6 +468,10 @@ footer{
   align-items: center;
   justify-content: center;
   gap:0px;
+  transition: 0.6s;
+}
+.grid-item:hover{
+  transform: scale(1.2);
 }
 .grid-item h2{
   line-height: 1;
@@ -552,12 +555,12 @@ footer{
   }
   /* live up page rwd*/
   .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* 在中等屏幕上显示两列 */
+    grid-template-columns: repeat(2, 1fr); 
   }
  }
  @media (max-width: 480px) {
   /* live up page rwd*/
   .grid-container {
-    grid-template-columns: 1fr; /* 在小屏幕上显示一列 */
+    grid-template-columns: 1fr; 
   }
 }
