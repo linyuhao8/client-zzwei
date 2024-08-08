@@ -348,7 +348,6 @@ footer{
   padding-bottom: 10px;
 }
 #toggle {
-  display: block;
   width:25px;
   height: 30px;
   cursor: pointer;
