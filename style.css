@@ -45,7 +45,16 @@ header {
 .header-logo{
   align-items: flex-start;
   margin-right: 10px;
+  transition: transform 0.3s ease, content 0.3s ease;
+  width: 50px; 
+  height: auto; 
 }
+.header-logo:hover {
+  content: url('./images/images/logocolourchange.png'); 
+  width: 50px; 
+  height: auto; 
+}
+
 .header-menu {
   width: auto;
   display: flex;
@@ -163,7 +172,26 @@ header {
   animation: marquee 3s linear infinite;
   font-weight: 300;
   font-size: 4.8em;
-  color: var(--bg-color); /* 文本颜色可以根据需要调整 */
+  color: var(--bg-color); 
+  text-shadow: -1px -1px 0 var(--light-red), 1px -1px 0 var(--light-red),
+    -1px 1px 0 var(--light-red), 1px 1px 0 var(--light-red);
+}
+.marquee1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  width: 100%;
+}
+.marquee1 span {
+  text-transform: uppercase;
+  will-change: transform;
+  transform: translateX(0);
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+  font-weight: 300;
+  font-size: 4.8em;
+  color: var(--bg-color); 
   text-shadow: -1px -1px 0 var(--light-red), 1px -1px 0 var(--light-red),
     -1px 1px 0 var(--light-red), 1px 1px 0 var(--light-red);
 }
@@ -202,6 +230,9 @@ header {
   text-decoration: underline;
   font-size: 25px;
   margin: 10px 0px;
+  color:var(--text-color);
+}.pricing a.text-blue:hover{
+  color: var(--light-red);
 }
 .artist-section {
   padding-top: 50px;
@@ -235,12 +266,15 @@ header {
   z-index: 888;
 }
 
+/* .splide__arrow--prev::before {
+  content: "←";
+}
+.splide__arrow--next::before {
+  content: "→";
+} */
+
 .splide__arrow {
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
-  color: #fff;
-  font-weight: 700;
+  z-index: 888;
   border: none;
   background-color: transparent !important;
   cursor: pointer;
@@ -249,16 +283,6 @@ header {
   transform: translateY(-50%);
 }
 
-.splide__arrow:hover {
-  background-color: #ccc;
-}
-
-.splide__arrow--prev::before {
-  content: "←";
-}
-.splide__arrow--next::before {
-  content: "→";
-}
 .splide__pagination {
   display: none !important;
 }
